@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>9 – The Stream Beyond Time | Cosmic Odyssey</title>
+  <meta name="description" content="A multidimensional exploration of spacetime continuum">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <style>
+    :root {
+      --primary: #FFD700;
+      --secondary: #00FFFF;
+      --bg: #0A0A0A;
+      --text: #FFFFFF;
+      --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    [data-theme="light"] {
+      --bg: #F8F9FA;
+      --text: #212529;
+      --primary: #2B2D42;
+      --secondary: #EF233C;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Mono', monospace;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Dark Mode Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: var(--bg);
+      border: none;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Header */
+    header {
+      position: relative;
+      height: 80vh;
+      overflow: hidden;
+    }
+
+    .parallax-banner {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.1);
+      transition: transform 0.5s;
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      text-align: center;
+      margin: 3rem 0;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Chapter Cards */
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+
+    .chapter-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--primary);
+      transition: var(--transition);
+    }
+
+    .chapter-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(255,215,0,0.1);
+    }
+
+    /* Image Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 4rem 0;
+    }
+
+    .gallery-item {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      main {
+        padding: 2rem 1rem;
+      }
+      .title {
+        margin: 2rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
+
+  <header>
+    <img 
+      src="https://dawud78hassan.github.io/Dawud-Hassan/cosmic-banner.jpg" 
+      alt="Cosmic timeline visualization"
+      class="parallax-banner"
+      loading="eager"
+    >
+  </header>
+
+  <main>
+    <h1 class="title">9 – The Stream Beyond Time</h1>
+
+    <div class="chapter-grid">
+      <!-- Chapter 1 -->
+      <div class="chapter-card">
+        <h2>Chapter 1: The Quantum Dawn</h2>
+        <p>Where time folds into quantum probabilities...</p>
+        <button class="expand-btn">Read More</button>
+        <div class="hidden-content">
+          <p>The beginning of temporal superposition...</p>
+        </div>
+      </div>
+
+      <!-- Add more chapters -->
+    </div>
+
+    <div class="gallery-grid">
+      <img 
+        src="https://via.placeholder.com/400x300" 
+        class="gallery-item" 
+        alt="Quantum Fractal 1"
+        onclick="openModal(this)"
+      >
+      <!-- Add more images -->
+    </div>
+
+    <div class="modal" id="imageModal" onclick="closeModal()">
+      <img class="modal-img" id="expandedImg">
+    </div>
+  </main>
+
+  <script>
+    // Dark Mode Toggle
+    const toggleTheme = () => {
+      const html = document.documentElement;
+      const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+    document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
+
+    // Set Initial Theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    // Image Modal
+    function openModal(img) {
+      document.getElementById('expandedImg').src = img.src;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    // Parallax Effect
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      document.querySelector('.parallax-banner').style.transform = 
+        `scale(${1 + (scrolled * 0.0005)})`;
+    });
+
+    // Service Worker for PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
+</body>
+</html>
