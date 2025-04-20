@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9 – The Stream Beyond Time</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .title {
+      font-size: 2.5em;
+      margin: 20px 0;
+      color: #ffcc00;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      margin: 10px 20px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://dawud78hassan.github.io/Dawud-Hassan/stream-banner.png" alt="9 – The Stream Beyond Time" />
+  </header>
+  <main>
+    <div class="title">9 – The Stream Beyond Time</div>
+    <div class="subtitle">A journey beyond the boundaries of light, time, and anti-time</div>
+  </main>
+</body>
+</html>
