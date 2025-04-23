@@ -1,0 +1,12 @@
+// Philosophical Self-Evolving App (Core Logic Start)
+
+import React, { useState, useEffect } from 'react'; import { Button } from '@/components/ui/button'; import { motion } from 'framer-motion';
+
+const philosophicalLayers = [ { name: 'Origin', meaning: 'Where all questions begin. The silence before thought.' }, { name: 'Awareness', meaning: 'Recognition of the moment and existence.' }, { name: 'Inquiry', meaning: 'Curiosity that challenges structure.' }, { name: 'Contradiction', meaning: 'The clash that births understanding.' }, { name: 'Surrender', meaning: 'Letting go to realize deeper meaning.' }, { name: 'Flow', meaning: 'Merging with the rhythm of knowledge.' }, { name: 'Transcendence', meaning: 'Breaking limits to perceive the infinite.' }, { name: 'Unity', meaning: 'Where self, knowledge, and time become one.' } ];
+
+export default function SelfEvolvingExperience() { const [layerIndex, setLayerIndex] = useState(0); const [autoEvolve, setAutoEvolve] = useState(true);
+
+useEffect(() => { if (!autoEvolve) return; const timer = setTimeout(() => { setLayerIndex((prev) => (prev + 1) % philosophicalLayers.length); }, 6000); return () => clearTimeout(timer); }, [layerIndex, autoEvolve]);
+
+return ( <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-4"> <motion.div className="text-center mb-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }} > <h1 className="text-3xl font-bold">{philosophicalLayers[layerIndex].name}</h1> <p className="text-lg mt-2">{philosophicalLayers[layerIndex].meaning}</p> </motion.div> <Button onClick={() => setAutoEvolve(!autoEvolve)} variant="outline" className="mt-4" > {autoEvolve ? 'Pause Evolution' : 'Resume Evolution'} </Button> </div> ); }
+
