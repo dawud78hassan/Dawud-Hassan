@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>qun – Symbolic Grid</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(#0e0e0e, #000);
+      color: #fff;
+      font-family: monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 20px;
+      text-align: center;
+      font-size: 32px;
+      animation: pulse 3s infinite ease-in-out;
+    }
+    .cell {
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      transition: transform 0.4s, background 0.4s;
+    }
+    .cell:hover {
+      transform: scale(1.2);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="cell">§</div>
+    <div class="cell">⧗</div>
+    <div class="cell">§</div>
+    <div class="cell">∞∇</div>
+    <div class="cell">⌂</div>
+    <div class="cell">∞∇</div>
+    <div class="cell">→⨀</div>
+    <div class="cell">⌂</div>
+    <div class="cell">→⨀</div>
+  </div>
+</body>
+</html>
