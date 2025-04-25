@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Am Time | TimeSpark Archive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #1a1a1a;
+        }
+
+        .content {
+            background: white;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .highlight {
+            color: #ff6347;
+            font-weight: bold;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #222; color: white; padding: 15px 0; text-align: center;">
+        <h1>I Am Time</h1>
+        <p>Your TimeSpark Archive Profile</p>
+    </header>
+
+    <div class="content">
+        <div class="section">
+            <h2>1. About Me:</h2>
+            <p><strong>Name:</strong> I Am Time</p>
+            <p><strong>Philosophical Theme:</strong> The essence of creation lies hidden within numbers.</p>
+            <p><strong>Philosophical Quote:</strong> "I do not see the truth, I do not see the lie."</p>
+        </div>
+        <div class="section">
+            <h2>2. My Question to the World:</h2>
+            <p><span class="quote">"True knowledge does not come from books—so where does it come from?"</span></p>
+        </div>
+        <div class="section">
+            <h2>3. Time as Energy:</h2>
+            <p>Time is in constant motion, and thus it can be harnessed as energy. The flow of time itself is a force that can shape existence.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 I Am Time | TimeSpark Archive</p>
+    </footer>
+</body>
+</html>
